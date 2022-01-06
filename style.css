@@ -4,34 +4,28 @@
 }
 
 .container {
-  background: #86f;
-  padding: 20px 5px;
+  background-color: #fff;
+  filter: contrast(30);
 }
 .container .caja {
-  background: #025;
-  height: 80px;
-  width: 80px;
-  margin: 20px;
-  position: relative;
-  animation-name: desplazarse;
-  animation-duration: 3s;
-  animation-iteration-count: 1;
-  animation-direction: alternate;
-  animation-fill-mode: both;
-  animation-delay: 1s;
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background: red;
+  margin: 40px;
+  border-radius: 50%;
+  filter: blur(20px);
+}
+.container .caja:first-child {
+  animation: trasladar 3s alternate infinite;
 }
 
-@keyframes desplazarse {
+@keyframes trasladar {
   0% {
-    left: 0;
-    background: #000;
-  }
-  50% {
-    background: red;
+    transform: translate(0);
   }
   100% {
-    left: 80%;
-    background: green;
+    transform: translate(160px);
   }
 }
 
